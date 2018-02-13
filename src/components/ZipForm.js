@@ -1,6 +1,14 @@
 import React from 'react';
 
 class ZipForm extends React.Component{
+  super(props);
+
+  this.state = {
+    zipcode: ''
+  };
+
+
+
   render(){
     return (
       <div className="zip-form">
