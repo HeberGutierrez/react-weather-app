@@ -1,6 +1,12 @@
 import React, { Component } from 'react';
 
 class WeatherListItem extends Component {
+  onClick() {
+    const { onDayClicked, index } = this.props
+
+    onDayClicked(index);
+  }
+
   render() {
     const { day } = this.props;
     const date = new Date(day.dt * 1000);
