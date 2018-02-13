@@ -7,8 +7,8 @@ class ZipForm extends React.Component{
     zipcode: ''
   }
 
-
   this.inputUpdated = this.inputUpdated.bind(this);
+  this.submitZipCode = this.submitZipCode.bind(this);
 }
 
 submitZipCode(e){
