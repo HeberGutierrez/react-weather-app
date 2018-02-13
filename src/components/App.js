@@ -15,7 +15,7 @@ class App extends React.Component {
     };
 
     this.onFormSubmit = this.onFormSubmit.bind(this);
-
+    this.onDayClicked = this.onDayClicked.bind(this);
   }
 
   onFormSubmit(zipcode){
@@ -38,7 +38,7 @@ class App extends React.Component {
     return (
       <div className="app">
              <ZipForm onSubmit={this.onFormSubmit} />
-             <WeatherList days={dates} />
+             <WeatherList days={dates} onDayClicked={this.onDayClicked} />
            </div>
     );
   }
