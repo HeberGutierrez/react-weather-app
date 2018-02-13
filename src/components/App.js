@@ -33,16 +33,26 @@ class App extends React.Component {
     this.setState({ selectedDate: dayIndex });
   }
 
+  getCurrentDayComponent(){
+    const { dates, city, selectedDate } = this.state;
+
+    if (this.state.selectedDate === null){
+      return null;
+    }
+
+    return <CurrentDay day={dates[selectedDate]} city={city} />
+
+  }
+
   render() {
     const { dates } = this.state;
     const { dates, city, selectedDate } = this.state;
-
 
     return (
       <div className="app">
              <ZipForm onSubmit={this.onFormSubmit} />
              <WeatherList days={dates} onDayClicked={this.onDayClicked} />
-             <CurrentDay day={dates[selectedDate]} city={city} />
+             {this.getCurrentDayComponent()}
            </div>
     );
   }

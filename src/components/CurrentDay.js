@@ -2,18 +2,6 @@ import React, { Component } from 'react';
 
 class CurrentDay extends Component {
 
-getCurrentDayComponent(){
-  const { dates, city, selectedDate } = this.state;
-
-  if (this.state.selectedDate === null){
-    return null;
-  }
-
-  return <CurrentDay day={dates[selectedDate]} city={city} />
-
-}
-
-
   render(){
     const { city, day: { temp, weather, pressure, humidity, speed, deg  }} = this.props;
     const w = weather[0];
