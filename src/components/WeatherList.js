@@ -7,6 +7,12 @@ class WeatherList extends Component {
 
     return (
       <div className="weather-list flex-parent">
+      {days.map((day) =>
+        <WeatherListItem
+          key={day.dt}
+          day={day}
+        />
+      )}
       </div>
     );
   }
