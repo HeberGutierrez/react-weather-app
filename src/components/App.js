@@ -1,5 +1,6 @@
 import React from 'react';
 import ZipForm from './ZipForm.js';
+import { get } from 'axios';
 
 class App extends React.Component {
   constructor(props){
@@ -7,6 +8,9 @@ class App extends React.Component {
 
     this.state={
       zipcode: '',
+      city: {},
+      dates: [],
+      selectedDate: null
     };
 
     this.onFormSubmit = this.onFormSubmit.bind(this);
@@ -14,7 +18,13 @@ class App extends React.Component {
   }
 
   onFormSubmit(zipcode){
-    this.setState({ zipcode });
+    get(`http://localhost:3000/weather/${zipcode}`)
+    .then(({ data }) => {
+      const { city, list: dates } = data;
+
+      this.setState({ zipcode, city, dates, selectedDate: null });
+    });
+
   }
 
   render() {
