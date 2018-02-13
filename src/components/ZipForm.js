@@ -18,6 +18,8 @@ submitZipCode(e){
   const { onSubmit } = this.props;
 
   onSubmit(zipcode);
+
+  this.setState({ zipcode: ''});
 }
 
 inputUpdated(e) {
@@ -30,7 +32,7 @@ inputUpdated(e) {
   render(){
     return (
       <div className="zip-form">
-        <form>
+        <form onSubmit={this.submitZipCode}>
           <label htmlFor="zipcode">Zip Code</label>
           <input
             className="form-control"
@@ -40,7 +42,6 @@ inputUpdated(e) {
             onInput={this.inputUpdated}/>
           <button type="submit" className='btn btn-success'>Get the forecast!!</button>
         </form>
-        <form onSubmit={this.submitZipCode}>
       </div>
     );
   }
