@@ -6,6 +6,8 @@ class ZipForm extends React.Component{
   this.state = {
     zipcode: ''
   };
+
+  this.inputUpdated = this.inputUpdated.bind(this);
 }
 
 inputUpdated(e) {
