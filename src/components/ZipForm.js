@@ -40,6 +40,7 @@ inputUpdated(e) {
             onInput={this.inputUpdated}/>
           <button type="submit" className='btn btn-success'>Get the forecast!!</button>
         </form>
+        <form onSubmit={this.submitZipCode}>
       </div>
     );
   }
