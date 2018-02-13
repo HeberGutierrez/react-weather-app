@@ -28,6 +28,10 @@ class App extends React.Component {
 
   }
 
+  onDayClicked(dayIndex) {
+    this.setState({ selectedDate: dayIndex });
+  }
+
   render() {
     const { dates } = this.state;
 
@@ -35,7 +39,7 @@ class App extends React.Component {
       <div className="app">
              <ZipForm onSubmit={this.onFormSubmit} />
              <WeatherList days={dates} />
-           </div> 
+           </div>
     );
   }
 }
