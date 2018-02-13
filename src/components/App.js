@@ -9,6 +9,8 @@ class App extends React.Component {
       zipcode: '',
     };
 
+    this.onFormSubmit = this.onFormSubmit.bind(this);
+
   }
 
   onFormSubmit(zipcode){
