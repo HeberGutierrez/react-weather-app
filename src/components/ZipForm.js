@@ -6,7 +6,13 @@ class ZipForm extends React.Component{
   this.state = {
     zipcode: ''
   };
+}
 
+inputUpdated(e) {
+  const { value } = e.target;
+
+  this.setState({ zipcode: value });
+}
 
 
   render(){
@@ -17,7 +23,9 @@ class ZipForm extends React.Component{
           <input
             className="form-control"
             type="input"
-            name="zipcode"/>
+            name="zipcode"
+            value={this.state.zipcode}
+            onInput={this.inputUpdated}/>
           <button type="submit" className='btn btn-success'>Get the forecast!!</button>
         </form>
       </div>
