@@ -8,11 +8,12 @@ class WeatherListItem extends Component {
     return (
       <div className="weather-list-item">
         <h1>{date.getMonth() + 1} / {date.getDate()}</h1>
-        <h2>{day.temp.min.toFixed(1)&deg;F &#124; {day.temp.max.toFixed(1)}&deg;F</h2>
+        <h2>{day.temp.min.toFixed(1)}&deg;F &#124; {day.temp.max.toFixed(1)}&deg;F</h2>
       </div>
     );
   }
-}
+ }
+
 
 
 export default WeatherListItem;

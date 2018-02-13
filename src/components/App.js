@@ -32,10 +32,10 @@ class App extends React.Component {
     const { dates } = this.state;
 
     return (
-      <div class = "app" >
-              <ZipForm onSubmit={this.onFormSubmit} />
-              <WeatherList days={dates} />
-           </div > ;
+      <div className="app">
+             <ZipForm onSubmit={this.onFormSubmit} />
+             <WeatherList days={dates} />
+           </div> 
     );
   }
 }
