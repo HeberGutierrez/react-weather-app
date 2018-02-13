@@ -11,6 +11,15 @@ class ZipForm extends React.Component{
   this.inputUpdated = this.inputUpdated.bind(this);
 }
 
+submitZipCode(e){
+  e.preventDefault();
+
+  const { zipcode } = this.state;
+  const { onSubmit } = this.props;
+
+  onSubmit(zipcode);
+}
+
 inputUpdated(e) {
   const { value } = e.target;
 
