@@ -6,7 +6,7 @@ class WeatherList extends Component {
     const { days } = this.props;
 
     return (
-      <div className+"weather-list flex-parent">
+      <div className="weather-list flex-parent">
       </div>
     );
   }
