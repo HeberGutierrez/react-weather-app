@@ -1,11 +1,12 @@
 import React from 'react';
 
 class ZipForm extends React.Component{
-  super(props);
-
+  constructor(props){
+    super(props);
   this.state = {
     zipcode: ''
-  };
+  }
+
 
   this.inputUpdated = this.inputUpdated.bind(this);
 }
