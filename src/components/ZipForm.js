@@ -18,4 +18,4 @@ class ZipForm extends React.Component{
 }
 
 
-exports default ZipForm;
+export default ZipForm;
