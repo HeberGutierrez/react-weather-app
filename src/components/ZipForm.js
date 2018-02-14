@@ -12,10 +12,22 @@ class ZipForm extends React.Component{
 }
 
 submitZipCode(e){
+  e.preventDefault();
+
+  const { zipcode } = this.state;
   const { onSubmit } = this.props;
 
-  onSubmit(e.target.value);
+  onSubmit(zipcode);
+
+  this.setState({ zipcode: ''});
 }
+
+inputUpdated(e) {
+  const { value } = e.target;
+
+  this.setState({ zipcode: value });
+}
+
 
   render(){
     return (
